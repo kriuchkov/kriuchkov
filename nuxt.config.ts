@@ -1,14 +1,10 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   ssr: true,
-
-  // Senior Developer Mode: Strict type checking during build
   typescript: {
     typeCheck: true
   },
-
   app: {
     head: {
       meta: [
@@ -19,12 +15,10 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'page', mode: 'out-in' }
   },
-
   nitro: {
     static: true,
     preset: 'github_pages'
   },
-
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
