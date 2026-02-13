@@ -22,7 +22,7 @@ I specialize in constructing high-performance backend systems and immersive fron
 ## Connect with Me
 
 - **LinkedIn:** [linkedin.com/in/nkriuchkov](https://www.linkedin.com/in/nkriuchkov/)
-- **Email:** [nkriuchkov](https://t.me/nkriuchkov)
+- **Telegram:** [nkriuchkov](https://t.me/nkriuchkov)
 - **Website:** [kriuchkov.com](https://kriuchkov.com)
 
 <!--
