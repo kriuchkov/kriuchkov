@@ -51,7 +51,7 @@ const getStatusText = (index: number) => {
                    
                    <!-- CRT Overlay -->
                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-green-900/10 to-transparent opacity-0 group-hover:opacity-100 pointer-events-none mix-blend-overlay"></div>
-                   <div class="absolute inset-0 bg-[url('/images/scanlines.png')] opacity-10 pointer-events-none"></div>
+                   <div class="absolute inset-0 opacity-10 pointer-events-none"></div>
                    
                    <!-- Viewport Overlay Info -->
                    <div class="absolute bottom-2 left-2 bg-black/70 backdrop-blur-sm px-1.5 py-0.5 border border-green-500/30 rounded text-[10px] font-mono text-green-400">

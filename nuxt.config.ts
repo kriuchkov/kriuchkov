@@ -55,6 +55,16 @@ export default defineNuxtConfig({
     format: ['webp']
   },
 
+  postcss: {
+    plugins: {
+      cssnano: {
+        preset: ['default', {
+          discardComments: { removeAll: true },
+        }]
+      }
+    }
+  },
+
   content: {
     build: {
       markdown: {
