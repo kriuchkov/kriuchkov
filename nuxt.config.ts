@@ -15,6 +15,10 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'page', mode: 'out-in' }
   },
+  experimental: {
+    payloadExtraction: false, 
+    sharedPrerenderData: true, 
+  },
   nitro: {
     static: true,
     preset: 'github_pages'
