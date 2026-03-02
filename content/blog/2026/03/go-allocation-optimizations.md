@@ -3,6 +3,7 @@ title: 'Go Allocation Optimizations: From 1.24 to 1.26'
 date: '2026-03-01'
 description: 'How Go is reducing heap allocations with smarter compiler optimizations in versions 1.25 and 1.26.'
 category: 'Golang'
+source: 'https://go.dev/blog/allocation-optimizations'
 ---
 
 The Go team is constantly working on performance improvements, and recent releases have focused heavily on reducing the overhead of memory management. Specifically, there has been a concerted effort to move more allocations from the heap to the stack.

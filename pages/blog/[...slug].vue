@@ -12,17 +12,18 @@ const { data: allPosts } = await useAsyncData('blog-nav', () => {
 const groupedNavigation = computed(() => {
   if (!allPosts.value) return {}
   
-  const groups: Record<string, any[]> = {}
+  const groups: Record<string, Record<string, any[]>> = {}
   
   allPosts.value.forEach(post => {
       if (!post.date) return
       const date = new Date(post.date)
-      const year = date.getFullYear()
-      // const month = date.toLocaleString('default', { month: '2-digit' })
-      const key = `${year}`
+      const year = date.getFullYear().toString()
+      const month = date.toLocaleString('default', { month: 'long' })
       
-      if (!groups[key]) groups[key] = []
-      groups[key].push(post)
+      if (!groups[year]) groups[year] = {}
+      if (!groups[year][month]) groups[year][month] = []
+      
+      groups[year][month].push(post)
   })
   
   return groups
@@ -101,15 +102,25 @@ const scrollToTop = () => {
             <ContentRenderer :value="doc" />
 
             <!-- Post Footer -->
-            <div class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 flex justify-between items-center not-prose text-xs font-mono">
-                <div class="flex gap-4">
-                    <span class="text-gray-500">END_OF_TRANSMISSION</span>
-                    <span class="text-pink-500">Hash: <UiContentHash :content="doc.description" /></span>
+            <div class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col gap-4 not-prose text-xs font-mono">
+                <!-- Source Link -->
+                <div v-if="doc.source" class="flex items-center gap-2">
+                    <span class="text-gray-500">SOURCE:</span>
+                    <a :href="doc.source" target="_blank" rel="noopener noreferrer" class="text-pink-500 hover:underline break-all">
+                        {{ doc.source }}
+                    </a>
                 </div>
 
-                <button @click="scrollToTop" class="text-gray-500 hover:text-pink-500 transition-colors uppercase">
-                    ^ Return to Top
-                </button>
+                <div class="flex justify-between items-center w-full">
+                    <div class="flex gap-4">
+                        <span class="text-gray-500">END_OF_TRANSMISSION</span>
+                        <span class="text-pink-500">Hash: <UiContentHash :content="doc.description" /></span>
+                    </div>
+
+                    <button @click="scrollToTop" class="text-gray-500 hover:text-pink-500 transition-colors uppercase">
+                        ^ Return to Top
+                    </button>
+                </div>
             </div>
            </article>
            

@@ -6,11 +6,7 @@ const { data: articles } = await useAsyncData('all-logs', () => {
 
 <template>
     <UiTerminalSectionHeader 
-      title="~/all-posts"
-      to="/blog"
-      command="ls -la"
-      color="blue"
-      class="mb-8"
+      title="~/all-posts" to="/blog" command="ls -la" color="blue" class="mb-8"
     />
 
     <div class="space-y-4">
