@@ -1,18 +1,24 @@
 <script setup lang="ts">
 const route = useRoute()
-const { data: doc } = await useAsyncData(route.path, () => {
-  return queryCollection('blog').path(route.path).first()
+
+// Reconstruct path from slug to ensure consistency across server/client and avoid trailing slash issues
+const { slug } = route.params
+const urlSlug = Array.isArray(slug) ? slug.join('/') : slug
+const articlePath = `/blog/${urlSlug}`
+
+const { data: doc } = await useAsyncData(articlePath, () => {
+  return queryCollection('blog').path(articlePath).first()
 })
 
 const { data: allPosts } = await useAsyncData('blog-nav', () => {
-  return queryCollection('blog').order('date', 'DESC').all()
+  return queryCollection('blog').order('date', 'DESC').select('title', 'path', 'date').all()
 })
 
 // Group posts by Year -> Month for sidebar navigation
 const groupedNavigation = computed(() => {
-  if (!allPosts.value) return {}
+  if (!allPosts.value) return []
   
-  const groups: Record<string, Record<string, any[]>> = {}
+  const groups: { year: string; months: { name: string; posts: any[] }[] }[] = []
   
   allPosts.value.forEach(post => {
       if (!post.date) return
@@ -20,17 +26,29 @@ const groupedNavigation = computed(() => {
       const year = date.getFullYear().toString()
       const month = date.toLocaleString('default', { month: 'long' })
       
-      if (!groups[year]) groups[year] = {}
-      if (!groups[year][month]) groups[year][month] = []
+      let yearGroup = groups.find(g => g.year === year)
+      if (!yearGroup) {
+          yearGroup = { year, months: [] }
+          groups.push(yearGroup)
+      }
       
-      groups[year][month].push(post)
+      let monthGroup = yearGroup.months.find(m => m.name === month)
+      if (!monthGroup) {
+          monthGroup = { name: month, posts: [] }
+          yearGroup.months.push(monthGroup)
+      }
+      
+      monthGroup.posts.push(post)
   })
   
   return groups
 })
 
 useHead({
-  title: doc.value?.title || 'Not Found'
+  title: () => doc.value?.title || 'Not Found',
+  meta: [
+    { name: 'description', content: () => doc.value?.description || '' }
+  ]
 })
 
 const scrollToTop = () => {

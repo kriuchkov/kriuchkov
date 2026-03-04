@@ -1,6 +1,22 @@
 <script setup lang="ts">
+interface Post {
+  title: string
+  path: string
+  date: string
+}
+
+interface MonthGroup {
+  name: string
+  posts: Post[]
+}
+
+interface YearGroup {
+  year: string
+  months: MonthGroup[]
+}
+
 defineProps<{
-  navigation: Record<string, Record<string, any[]>>
+  navigation: YearGroup[]
 }>()
 
 const route = useRoute()
@@ -8,21 +24,21 @@ const route = useRoute()
 
 <template>
   <div class="space-y-8">
-    <div v-for="(months, year) in navigation" :key="year" class="relative">
+    <div v-for="yearGroup in navigation" :key="yearGroup.year" class="relative">
       <div class="flex items-center gap-2 mb-4 text-xs font-mono text-gray-500 uppercase tracking-widest pl-1">
         <Icon name="heroicons-outline:archive-box" class="w-4 h-4 opacity-50" />
-        LOGS_{{ year }}
+        LOGS_{{ yearGroup.year }}
       </div>
 
-      <div v-for="(posts, month) in months" :key="year + month" class="mb-4">
+      <div v-for="monthGroup in yearGroup.months" :key="yearGroup.year + monthGroup.name" class="mb-4">
         <!-- Month Header -->
-        <h4 class="text-xs font-mono text-gray-400 pl-4 mb-2 uppercase">{{ month }}</h4>
+        <h4 class="text-xs font-mono text-gray-400 pl-4 mb-2 uppercase">{{ monthGroup.name }}</h4>
 
         <ul class="space-y-1 relative">
           <!-- Vertical line -->
           <div class="absolute left-1.5 top-0 bottom-0 w-px bg-pink-500/20 -z-10"></div>
 
-          <li v-for="post in posts" :key="post.path">
+          <li v-for="post in monthGroup.posts" :key="post.path">
             <NuxtLink :to="post.path" class="group relative flex items-center py-1.5 transition-all text-sm font-mono pl-6"
               :class="[
                 post.path === route.path
