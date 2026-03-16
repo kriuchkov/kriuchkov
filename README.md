@@ -26,7 +26,6 @@ I specialize in constructing high-performance backend systems and immersive fron
 - **Telegram:** [nkriuchkov](https://t.me/nkriuchkov)
 - **Website:** [kriuchkov.com](https://kriuchkov.com)
 
-<br>
 
 ##### 💼 Open to Full-Time opportunities — [LinkedIn](https://www.linkedin.com/in/nkriuchkov/)
 
