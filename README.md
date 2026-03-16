@@ -27,7 +27,7 @@ I specialize in constructing high-performance backend systems and immersive fron
 - **Website:** [kriuchkov.com](https://kriuchkov.com)
 
 
-##### 💼 Open to Full-Time opportunities — [LinkedIn](https://www.linkedin.com/in/nkriuchkov/)
+##### 💼 Open to Full-Time opportunities — <a href="https://www.linkedin.com/in/nkriuchkov/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 
 <!--
 **kriuchkov/kriuchkov** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
