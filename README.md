@@ -1,25 +1,35 @@
-# Hi there, I'm Nikita Kriuchkov 👋
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=3000&pause=1000&color=4493F8&repeat=false&lines=Hi+there%2C+I'm+Nikita+Kriuchkov+%F0%9F%91%8B" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=3000&pause=1000&color=0969DA&repeat=false&lines=Hi+there%2C+I'm+Nikita+Kriuchkov+%F0%9F%91%8B" alt="Hi there, I'm Nikita Kriuchkov 👋" />
+</picture>
 
 > **Senior Software Engineer & Technology Enthusiast** with 18+ years of experience in designing scalable systems and modern applications.
 
-I specialize in constructing high-performance backend systems and immersive frontend experiences. My passion lies in **Golang**, **Rust**, **Python**, **TypeScript** and distributed architectures. 
+I specialize in constructing high-performance backend systems and immersive frontend experiences. My passion lies in **Golang**, **Rust**, **Python**, **TypeScript** and distributed architectures.
 
-I enjoy combining robust engineering with creative design, as seen in my **сyberpunk** portfolio.
+I enjoy combining robust engineering with creative design, as seen in my **cyberpunk** portfolio.
 
----
+<p>
+  <img src="https://github-readme-stats.vercel.app/api?username=kriuchkov&show_icons=true&theme=transparent&hide_border=true" height="165" alt="GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kriuchkov&layout=compact&theme=transparent&hide_border=true" height="165" alt="Top languages" />
+</p>
 
 ## Tech Stack
 
-<p align="center">
-  <img src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white" alt="Go" />
-  <img src="https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white" alt="Rust" />
-  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" />
-  <img src="https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxt.js&logoColor=%2300DC82" alt="Nuxt" />
-  <img src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D" alt="Vue.js" />
-  <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="Postgres" />
-  <img src="https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />
-</p>
+**Languages**&nbsp;&nbsp;
+<img src="https://img.shields.io/badge/C-03599C?style=flat-square&logo=c&logoColor=white" alt="C" />
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go" />
+<img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+
+**Infrastructure**&nbsp;&nbsp;
+<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes" />
+<img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+
+**Messaging**&nbsp;&nbsp;
+<img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white" alt="Kafka" />
+<img src="https://img.shields.io/badge/NATS-27AAE1?style=flat-square&logo=natsdotio&logoColor=white" alt="NATS" />
+<img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis" />
 
 ## Connect with Me
 
