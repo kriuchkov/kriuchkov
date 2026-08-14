@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=3000&pause=1000&color=4493F8&repeat=false&lines=Hi+there%2C+I'm+Nikita+Kriuchkov+%F0%9F%91%8B" />
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=3000&pause=1000&color=0969DA&repeat=false&lines=Hi+there%2C+I'm+Nikita+Kriuchkov+%F0%9F%91%8B" alt="Hi there, I'm Nikita Kriuchkov 👋" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=3000&pause=1000&color=4493F8&repeat=false&width=620&lines=Hi+there%2C+I'm+Nikita+Kriuchkov+%F0%9F%91%8B" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=3000&pause=1000&color=0969DA&repeat=false&width=620&lines=Hi+there%2C+I'm+Nikita+Kriuchkov+%F0%9F%91%8B" alt="Hi there, I'm Nikita Kriuchkov 👋" />
 </picture>
 
 > **Senior Software Engineer & Technology Enthusiast** with 18+ years of experience in designing scalable systems and modern applications.
@@ -10,8 +10,8 @@ I specialize in constructing high-performance backend systems and immersive fron
 I enjoy combining robust engineering with creative design, as seen in my **cyberpunk** portfolio.
 
 <p>
-  <img src="https://github-readme-stats.vercel.app/api?username=kriuchkov&show_icons=true&theme=transparent&hide_border=true" height="165" alt="GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kriuchkov&layout=compact&theme=transparent&hide_border=true" height="165" alt="Top languages" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=kriuchkov&show_icons=true&theme=transparent&hide_border=true" height="165" alt="GitHub stats" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=kriuchkov&layout=compact&theme=transparent&hide_border=true" height="165" alt="Top languages" />
 </p>
 
 ## Tech Stack
