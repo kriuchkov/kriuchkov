@@ -10,8 +10,14 @@ I specialize in constructing high-performance backend systems and immersive fron
 I enjoy combining robust engineering with creative design, as seen in my **cyberpunk** portfolio.
 
 <p>
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=kriuchkov&show_icons=true&theme=transparent&hide_border=true" height="165" alt="GitHub stats" />
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=kriuchkov&layout=compact&theme=transparent&hide_border=true" height="165" alt="Top languages" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg" />
+    <img src="assets/stats-light.svg" height="165" alt="GitHub stats" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/langs-dark.svg" />
+    <img src="assets/langs-light.svg" height="165" alt="Top languages" />
+  </picture>
 </p>
 
 ## Tech Stack
