@@ -3,6 +3,7 @@ title: 'MCP Tools: A Deep Dive'
 description: 'A comprehensive guide to Model Context Protocol (MCP): architecture, configuration, tools, and real-world efficiency.'
 category: 'AI & Productivity'
 date: '2026-01-30'
+tags: ["ai"]
 ---
 
 # Model Context Protocol (MCP)

@@ -3,6 +3,7 @@ title: 'Designing a Cyberpunk Interface: Beyond Just Neon'
 date: '2026-02-12'
 description: 'A deep dive into the design philosophy, color theory, and technical constraints behind building an immersive "System OS" portfolio.'
 category: 'Design Engineering'
+tags: ["design"]
 ---
 
 # Designing a Cyberpunk Interface: Beyond Just Neon

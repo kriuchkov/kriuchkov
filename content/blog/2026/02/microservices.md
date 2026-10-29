@@ -2,6 +2,7 @@
 title: "Building Scalable Systems with Microservices"
 date: "2026-02-10"
 description: "Lessons learned from decomposing a monolithic application into microservices. When to do it, and when to avoid it."
+tags: ["architecture"]
 ---
 
 # Building Scalable Systems

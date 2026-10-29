@@ -7,13 +7,13 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      htmlAttrs: { lang: 'en' },
       meta: [
         { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'theme-color', content: '#111827' }
+        { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
+        { name: 'theme-color', content: '#0E1014' }
       ]
-    },
-    pageTransition: { name: 'page', mode: 'out-in' }
+    }
   },
   experimental: {
     payloadExtraction: false, 
@@ -42,6 +42,16 @@ export default defineNuxtConfig({
     clientBundle: {
       scan: true
     }
+  },
+
+  tailwindcss: {
+    cssPath: '~/assets/css/main.css'
+  },
+
+  fonts: {
+    families: [
+      { name: 'JetBrains Mono', provider: 'google', weights: [400, 500, 700, 800] }
+    ]
   },
 
   colorMode: {

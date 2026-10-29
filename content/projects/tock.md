@@ -6,6 +6,13 @@ description: 'A powerful time tracking tool for the command line. It saves activ
 image: '/images/projects/tock_black.png'
 link: 'https://github.com/kriuchkov/tock'
 stack: ['Go', 'Bubble Tea', 'CLI']
+features:
+  - "Plaintext, human-readable activity files"
+  - "Interactive TUI calendar built with Bubble Tea"
+  - "Reads and writes Bartib and TimeWarrior data"
+  - "Color themes and custom colors"
+  - "iCal export and macOS calendar sync"
+install: "brew install tock"
 ---
 
 # tock
