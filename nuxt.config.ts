@@ -57,7 +57,9 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
     preference: 'dark',
-    fallback: 'dark'
+    fallback: 'dark',
+    // own key, so a choice saved by the old site doesn't override dark
+    storageKey: 'tui-theme'
   },
 
   image: {
