@@ -2,6 +2,7 @@
 title: 'Master Your Time with Tock: The TUI Time Tracker'
 date: '2026-02-02'
 description: 'Tock is a powerful CLI tool to track time, visualize productivity in a TUI calendar, and keep data open and accessible.'
+tags: ["tools"]
 ---
 
 # Efficiency in the Terminal

@@ -6,6 +6,12 @@ description: "LinkSwitch is an ultra-lightweight native link router for macOS, w
 image: '/images/projects/linkswith_black.png'
 link: "https://github.com/kriuchkov/linkswitch"
 stack: ["C", "Objective-C", "macOS", "YAML"]
+features:
+  - "Native code, about 20 MB of RAM"
+  - "Runs only when a link is clicked, then exits"
+  - "Rules in ~/.config/linkswitch/config.yaml"
+  - "Browser picker when no rule matches"
+install: "brew install --cask kriuchkov/tap/linkswitch"
 ---
 
 # LinkSwitch

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Generate profile stat cards (light/dark SVGs) in assets/ from the GitHub API.
+"""Generate profile stat cards (light/dark SVGs) and assets/stats.json from the GitHub API.
+
+The SVGs are shown in the profile README; stats.json feeds the "gh stats" pane on the site.
 
 Needs GITHUB_TOKEN in the environment; the default Actions token is enough
 since only public data is queried.
@@ -122,11 +124,17 @@ def main():
     if repos["totalCount"] > 100:
         print(f"warning: only first 100 of {repos['totalCount']} repos counted")
 
+    totals = {
+        "stars": sum(r["stargazerCount"] for r in repos["nodes"]),
+        "commits": user["contributionsCollection"]["totalCommitContributions"],
+        "pullRequests": user["pullRequests"]["totalCount"],
+        "contributedTo": user["repositoriesContributedTo"]["totalCount"],
+    }
     rows = [
-        ("stars", "Total Stars Earned", fmt(sum(r["stargazerCount"] for r in repos["nodes"]))),
-        ("commits", "Commits (last year)", fmt(user["contributionsCollection"]["totalCommitContributions"])),
-        ("prs", "Total PRs", fmt(user["pullRequests"]["totalCount"])),
-        ("contrib", "Contributed to", fmt(user["repositoriesContributedTo"]["totalCount"])),
+        ("stars", "Total Stars Earned", fmt(totals["stars"])),
+        ("commits", "Commits (last year)", fmt(totals["commits"])),
+        ("prs", "Total PRs", fmt(totals["pullRequests"])),
+        ("contrib", "Contributed to", fmt(totals["contributedTo"])),
     ]
 
     sizes, colors = {}, {}
@@ -142,7 +150,13 @@ def main():
     for theme in THEMES:
         (OUT_DIR / f"stats-{theme}.svg").write_text(stats_card(rows, theme) + "\n")
         (OUT_DIR / f"langs-{theme}.svg").write_text(langs_card(langs, theme) + "\n")
-    print(f"wrote 4 cards to {OUT_DIR}")
+    lang_total = sum(size for _, size, _ in langs) or 1
+    summary = {
+        **totals,
+        "languages": [{"name": name, "percent": round(size / lang_total * 100, 1)} for name, size, _ in langs],
+    }
+    (OUT_DIR / "stats.json").write_text(json.dumps(summary, indent=2) + "\n")
+    print(f"wrote 4 cards and stats.json to {OUT_DIR}")
 
 
 if __name__ == "__main__":

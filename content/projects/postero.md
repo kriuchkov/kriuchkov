@@ -6,6 +6,13 @@ description: 'A keyboard-driven terminal email client in a single binary. Read, 
 image: '/images/projects/postero.gif'
 link: 'https://github.com/kriuchkov/postero'
 stack: ['Go', 'Bubble Tea', 'IMAP', 'SMTP', 'TUI', 'AI']
+features:
+  - "Vim-style keys for triage, search and compose"
+  - "IMAP and SMTP with app passwords, keychain or OAuth2"
+  - "Demo mode: a sample inbox, no account needed"
+  - "AI drafts via Claude, OpenAI, Gemini or a local agent"
+  - "Provider auto-detection in the first-run wizard"
+install: "brew install kriuchkov/tap/postero"
 ---
 
 # Postero

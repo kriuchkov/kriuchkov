@@ -37,7 +37,7 @@ const refinedSrc = computed(() => {
     :alt="alt"
     :width="width"
     :height="height"
-    class="rounded-lg shadow-lg my-8"
+    class="tui-prose__img"
     loading="lazy"
   />
 </template>

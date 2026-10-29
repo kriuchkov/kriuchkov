@@ -3,6 +3,7 @@ title: 'Programming with AI Agents: The Autonomous IDE'
 description: 'How Visual Studio Code agents are transforming developers from typists into architects through autonomous context awareness and execution.'
 category: 'AI & Productivity'
 date: '2025-12-05'
+tags: ["ai"]
 ---
 
 # Programming with AI Agents: The Autonomous IDE

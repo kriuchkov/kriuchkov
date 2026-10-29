@@ -13,15 +13,10 @@ export default <Config>{
   ],
   theme: {
     extend: {
-      colors: {
-        primary: '#111827', // Gray 900
-        secondary: '#4b5563', // Gray 600
-        accent: '#2563eb', // Blue 600
-      },
+      // The TUI design keeps colors as CSS variables in assets/css/main.css
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
-        mono: ['"JetBrains Mono"', 'monospace']
+        sans: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
       }
     }
   },

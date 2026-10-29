@@ -8,6 +8,8 @@ export default defineContentConfig({
       schema: z.object({
         date: z.string(),
         description: z.string(),
+        tags: z.array(z.string()).optional(),
+        category: z.string().optional(),
         externalUrl: z.string().optional(),
         source: z.string().optional()
       })
@@ -21,7 +23,9 @@ export default defineContentConfig({
         image: z.string().optional(),
         link: z.string().optional(),
         license: z.string().optional(),
-        stack: z.array(z.string()).optional()
+        stack: z.array(z.string()).optional(),
+        features: z.array(z.string()).optional(),
+        install: z.string().optional()
       })
     }),
     ai: defineCollection({
@@ -31,6 +35,7 @@ export default defineContentConfig({
         title: z.string(),
         description: z.string(),
         date: z.string().optional(),
+        tags: z.array(z.string()).optional(),
         category: z.string().optional()
       })
     })

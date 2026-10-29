@@ -6,6 +6,13 @@ description: 'A sidebar for Herdr that shows which AI agent is working, which on
 image: '/images/projects/herdr-scope.gif'
 link: 'https://github.com/kriuchkov/herdr-scope'
 stack: ['Go', 'Herdr', 'TUI', 'AI Agents', 'Claude Code', 'Codex']
+features:
+  - "Spinner, ? and ✓ states at a glance"
+  - "Grouped by project, busiest group first"
+  - "Marks for 27 agent vendors"
+  - "prefix+u jumps to the next agent waiting on you"
+  - "Settings popup applied without a restart"
+install: "herdr plugin install kriuchkov/herdr-scope --ref release"
 ---
 
 # Herdr Scope

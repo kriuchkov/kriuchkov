@@ -3,6 +3,7 @@ title: 'RAG and Vector Databases'
 description: 'Exploring RAG architecture (Retrieval-Augmented Generation), the role of vector databases, and embeddings in building modern AI applications.'
 category: 'AI & Productivity'
 date: '2026-02-05'
+tags: ["ai"]
 ---
 
 # RAG and Vector Databases: An Architecture Guide

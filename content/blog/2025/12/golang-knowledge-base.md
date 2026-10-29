@@ -3,6 +3,7 @@ title: 'Golang Knowledge Base: Practical Experience & Structure'
 date: '2025-12-01'
 description: 'Why systematize Go knowledge? High-load experience, Python migration, TDD, and architectural patterns that formed the foundation of my knowledge base.'
 category: 'Golang'
+tags: ["golang"]
 ---
 
 Over the years working as a Senior Golang Engineer, I’ve come to the conclusion that high-quality development isn't about memorizing syntax, but about a deep understanding of how the tool works "under the hood" and having quick access to proven patterns.
