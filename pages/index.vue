@@ -23,13 +23,6 @@ const { data: projects } = await useAsyncData('featured-projects', () => {
   return queryCollection('projects').order('sort', 'ASC').limit(4).all()
 }, { default: () => [] })
 
-const { data: academyUpdates } = await useAsyncData('latest-academy', () => {
-  return queryCollection('academy')
-    .order('date', 'DESC')
-    .limit(3)
-    .all()
-}, { default: () => [] })
-
 const { data: aiUpdates } = await useAsyncData('latest-ai', () => {
   return queryCollection('ai')
     .order('date', 'DESC')
@@ -48,9 +41,6 @@ const { data: aiUpdates } = await useAsyncData('latest-ai', () => {
 
     <!-- AI Productivity -->
     <SectionsAiSection :items="aiUpdates" />
-
-    <!-- Academy Updates -->
-    <SectionsAcademyUpdates :items="academyUpdates" />
 
     <!-- Latest Posts -->
     <SectionsLatestPosts :articles="articles" />

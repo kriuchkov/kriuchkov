@@ -29,10 +29,6 @@
            <span class="text-gray-300 dark:text-gray-600 group-hover:text-purple-400/50">./</span>ai
         </NuxtLink>
 
-        <NuxtLink to="/academy" class="group px-4 py-2 rounded-lg text-xs font-medium text-gray-600 dark:text-gray-400 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-teal-900/10 transition-all">
-           <span class="text-gray-300 dark:text-gray-600 group-hover:text-teal-400/50">./</span>academy
-        </NuxtLink>
-
         <div class="pl-4 ml-4 border-l border-gray-200 dark:border-gray-800 flex items-center">
            <UiThemeToggle />
         </div>
@@ -61,9 +57,6 @@
         </NuxtLink>
         <NuxtLink to="/ai" class="block px-4 py-3 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/10 hover:text-purple-600 dark:hover:text-purple-400" @click="mobileMenuOpen = false">
           <span class="text-blue-500 mr-2">➜</span> cd /ai
-        </NuxtLink>
-        <NuxtLink to="/academy" class="block px-4 py-3 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-teal-50 dark:hover:bg-teal-900/10 hover:text-teal-600 dark:hover:text-teal-400" @click="mobileMenuOpen = false">
-          <span class="text-blue-500 mr-2">➜</span> cd /academy
         </NuxtLink>
       </nav>
     </div>

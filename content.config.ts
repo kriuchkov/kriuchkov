@@ -24,16 +24,6 @@ export default defineContentConfig({
         stack: z.array(z.string()).optional()
       })
     }),
-    academy: defineCollection({
-      type: 'page',
-      source: 'academy/**/*.md',
-      schema: z.object({
-        title: z.string(),
-        description: z.string(),
-        category: z.string(),
-        date: z.string().optional()
-      })
-    }),
     ai: defineCollection({
       type: 'page',
       source: 'ai/**/*.md',
