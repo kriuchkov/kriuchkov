@@ -3,7 +3,7 @@ title: "LinkSwitch"
 sort: 3
 license: 'GPL-3.0'
 description: "LinkSwitch is an ultra-lightweight native link router for macOS, written in C/Objective-C."
-image: '/images/projects/linkswith_black.png'
+logo: '/images/projects/logos/linkswitch.svg'
 link: "https://github.com/kriuchkov/linkswitch"
 stack: ["C", "Objective-C", "macOS", "YAML"]
 features:

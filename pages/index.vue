@@ -42,6 +42,7 @@ const projects = computed(() => (data.value?.projects || []).map(p => ({
   license: p.license || '',
   link: p.link || '',
   image: p.image || '',
+  logo: p.logo || '',
   description: p.description || ''
 })))
 const posts = computed(() => data.value?.posts || [])
@@ -154,7 +155,7 @@ useStatusLine(() => ({
                 @focus="selected = i"
               >
                 <span class="tui-item__marker" aria-hidden="true">{{ i === selected ? '▸' : '' }}</span>
-                <span class="tui-item__name tui-strong">{{ p.id }}</span>
+                <span class="tui-item__name tui-item__name--mark tui-strong"><img v-if="p.logo" :src="p.logo" alt="" class="tui-item__mark" width="16" height="16">{{ p.id }}</span>
                 <span class="tui-item__grow tui-soft tui-ellipsis">{{ p.stack }}</span>
                 <span class="tui-muted">{{ p.license }}</span>
               </NuxtLink>
@@ -164,7 +165,8 @@ useStatusLine(() => ({
         </TuiPane>
 
         <TuiPane v-if="current" title="preview" :meta="current.id" class="tui-w2">
-          <img :src="current.image" :alt="`${current.title} screenshot`" class="tui-shot" loading="lazy">
+          <TuiLogo v-if="current.logo" :src="current.logo" :name="current.id" :meta="current.stack" />
+          <img v-else-if="current.image" :src="current.image" :alt="`${current.title} screenshot`" class="tui-shot" loading="lazy">
           <p class="tui-soft">{{ current.description }}</p>
           <div class="tui-actions">
             <a :href="current.link" target="_blank" rel="noopener noreferrer" class="tui-action"><span class="tui-key">[o]</span>open repo</a>

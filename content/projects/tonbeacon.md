@@ -3,7 +3,7 @@ title: "TonBeacon"
 sort: 10
 license: 'GPL-3.0'
 description: "TonBeacon is a self-hosted B2B solution providing infrastructure for generating user wallets on the TON (The Open Network) blockchain, tracking incoming transactions, and automatically centralizing funds to a master wallet."
-image: "/images/projects/tonbeacon_black.png"
+logo: '/images/projects/logos/tonbeacon.svg'
 link: "https://github.com/kriuchkov/tonbeacon"
 stack: ["Go", "TON", "Kafka", "PostgreSQL", "gRPC"]
 features:

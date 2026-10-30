@@ -4,6 +4,7 @@ sort: 2
 license: 'GPL-3.0'
 description: 'A keyboard-driven terminal email client in a single binary. Read, triage, search and compose mail with vim-style keys, and draft replies with AI.'
 image: '/images/projects/postero.gif'
+logo: '/images/projects/logos/postero.svg'
 link: 'https://github.com/kriuchkov/postero'
 stack: ['Go', 'Bubble Tea', 'IMAP', 'SMTP', 'TUI', 'AI']
 features:

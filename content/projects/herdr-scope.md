@@ -4,6 +4,7 @@ sort: 4
 license: 'MIT'
 description: 'A sidebar for Herdr that shows which AI agent is working, which one waits on you, and which is done, grouped by project.'
 image: '/images/projects/herdr-scope.gif'
+logo: '/images/projects/logos/herdr-scope.svg'
 link: 'https://github.com/kriuchkov/herdr-scope'
 stack: ['Go', 'Herdr', 'TUI', 'AI Agents', 'Claude Code', 'Codex']
 features:

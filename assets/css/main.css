@@ -353,6 +353,8 @@ html.light {
 .tui-item--filter { min-height: 36px; justify-content: space-between; gap: 12px; }
 .tui-item__marker { flex: 0 0 var(--ch); color: var(--accent); }
 .tui-item__name { flex: 0 0 calc(var(--ch) * 13); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tui-item__name--mark { flex-basis: calc(var(--ch) * 15); }
+.tui-item__mark { display: inline-block; width: 16px; height: 16px; margin-right: var(--ch); vertical-align: -3px; }
 .tui-item__grow { flex: 1 1 auto; min-width: 0; }
 .tui-item__date { flex: 0 0 5ch; }
 .tui-item > .tui-muted:last-child { white-space: nowrap; }
@@ -492,13 +494,30 @@ html.light {
 }
 .tui-shot--wide { aspect-ratio: 16 / 9; }
 
+/* project logo card: the mark from public/images/projects/logos plus the name */
+.tui-logo {
+  aspect-ratio: 1060 / 560;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 16px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.tui-logo__mark { width: clamp(72px, 12vw, 112px); height: auto; margin-bottom: 8px; }
+.tui-logo__name { font-size: 22px; line-height: 1.2; font-weight: 800; color: var(--fg-strong); }
+
 /* ---------------------------------------------------------------
    Projects, writing
    --------------------------------------------------------------- */
 .tui-projects__list { flex: 2 1 460px; gap: 10px; }
 .tui-projects__details { flex: 3 1 560px; gap: 18px; }
 .tui-details__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
-.tui-details__name { font-size: 28px; line-height: 1.2; font-weight: 800; color: var(--fg-strong); }
+.tui-details__name { display: inline-flex; align-items: center; gap: 12px; font-size: 28px; line-height: 1.2; font-weight: 800; color: var(--fg-strong); }
+.tui-details__mark { width: 36px; height: 36px; flex: none; }
 .tui-features { display: flex; flex-direction: column; gap: 6px; }
 .tui-features__list { gap: 4px; }
 .tui-features__list li { display: flex; gap: 10px; }

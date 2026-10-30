@@ -20,6 +20,7 @@ const all = computed(() => (data.value || []).map(p => ({
   license: p.license || '',
   link: p.link || '',
   image: p.image || '',
+  logo: p.logo || '',
   description: p.description || '',
   features: p.features || [],
   install: p.install || (p.link ? `git clone ${p.link}` : '')
@@ -117,7 +118,7 @@ useStatusLine(() => ({
       </div>
       <div class="tui-colhead" aria-hidden="true">
         <span class="tui-item__marker" />
-        <span class="tui-item__name">NAME</span>
+        <span class="tui-item__name tui-item__name--mark">NAME</span>
         <span class="tui-item__grow">STACK</span>
         <span>LICENSE</span>
       </div>
@@ -131,7 +132,7 @@ useStatusLine(() => ({
             @click="select(p.id, true)"
           >
             <span class="tui-item__marker" aria-hidden="true">{{ p === current ? '▸' : '' }}</span>
-            <span class="tui-item__name tui-strong">{{ p.id }}</span>
+            <span class="tui-item__name tui-item__name--mark tui-strong"><img v-if="p.logo" :src="p.logo" alt="" class="tui-item__mark" width="16" height="16">{{ p.id }}</span>
             <span class="tui-item__grow tui-soft tui-ellipsis">{{ p.stack }}</span>
             <span class="tui-muted">{{ p.license }}</span>
           </button>
@@ -144,10 +145,12 @@ useStatusLine(() => ({
 
     <TuiPane v-if="current" id="project-details" title="details" :meta="current.id" class="tui-projects__details">
       <div class="tui-details__head">
-        <h2 class="tui-details__name">{{ current.id }}</h2>
+        <h2 class="tui-details__name">
+          <img v-if="current.logo" :src="current.logo" alt="" class="tui-details__mark" width="36" height="36">{{ current.id }}
+        </h2>
         <p class="tui-muted">{{ current.license }} · {{ current.stackFull }}</p>
       </div>
-      <img :src="current.image" :alt="`${current.title} screenshot`" class="tui-shot tui-shot--wide" loading="lazy">
+      <img v-if="current.image" :src="current.image" :alt="`${current.title} screenshot`" class="tui-shot tui-shot--wide" loading="lazy">
       <p class="tui-read">{{ current.description }}</p>
       <div v-if="current.features.length" class="tui-features">
         <p class="tui-muted tui-small">features</p>

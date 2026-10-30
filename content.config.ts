@@ -21,6 +21,7 @@ export default defineContentConfig({
         sort: z.number().optional(),
         description: z.string().optional(),
         image: z.string().optional(),
+        logo: z.string().optional(),
         link: z.string().optional(),
         license: z.string().optional(),
         stack: z.array(z.string()).optional(),
