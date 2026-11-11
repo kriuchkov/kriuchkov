@@ -1,12 +1,12 @@
 {
-  "stars": 527,
-  "commits": 225,
-  "pullRequests": 85,
+  "stars": 528,
+  "commits": 242,
+  "pullRequests": 89,
   "contributedTo": 3,
   "languages": [
     {
       "name": "Go",
-      "percent": 75.5
+      "percent": 75.6
     },
     {
       "name": "Lua",
@@ -14,7 +14,7 @@
     },
     {
       "name": "Rust",
-      "percent": 3.3
+      "percent": 3.2
     },
     {
       "name": "C",
