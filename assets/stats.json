@@ -1,32 +1,32 @@
 {
-  "stars": 530,
-  "commits": 223,
-  "pullRequests": 89,
+  "stars": 531,
+  "commits": 225,
+  "pullRequests": 91,
   "contributedTo": 3,
   "languages": [
     {
       "name": "Go",
-      "percent": 73.2
+      "percent": 75.0
     },
     {
       "name": "Lua",
-      "percent": 19.6
+      "percent": 18.3
     },
     {
       "name": "C",
-      "percent": 2.5
+      "percent": 2.3
     },
     {
       "name": "Python",
-      "percent": 2.1
+      "percent": 2.0
     },
     {
       "name": "Vue",
-      "percent": 1.7
+      "percent": 1.6
     },
     {
       "name": "CSS",
-      "percent": 0.9
+      "percent": 0.8
     }
   ]
 }
