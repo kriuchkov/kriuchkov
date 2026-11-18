@@ -7,6 +7,7 @@ const back = computed(() => {
   const p = route.path
   if (/^\/blog\/.+/.test(p)) return { to: '/blog', label: 'writing' }
   if (/^\/ai\/.+/.test(p)) return { to: '/ai', label: 'ai' }
+  if (/^\/tock\/?$/.test(p)) return { to: '/projects?p=tock', label: 'projects' }
   return null
 })
 </script>

@@ -5,6 +5,7 @@ license: 'GPL-3.0'
 description: 'A powerful time tracking tool for the command line. It saves activity logs as plaintext files and provides an interactive terminal UI using Bubble Tea.'
 logo: '/images/projects/logos/tock.svg'
 link: 'https://github.com/kriuchkov/tock'
+page: '/tock'
 stack: ['Go', 'Bubble Tea', 'CLI']
 features:
   - "Plaintext, human-readable activity files"

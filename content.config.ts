@@ -26,7 +26,9 @@ export default defineContentConfig({
         license: z.string().optional(),
         stack: z.array(z.string()).optional(),
         features: z.array(z.string()).optional(),
-        install: z.string().optional()
+        install: z.string().optional(),
+        // a landing page on this site, e.g. /tock
+        page: z.string().optional()
       })
     }),
     ai: defineCollection({

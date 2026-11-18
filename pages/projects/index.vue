@@ -23,7 +23,8 @@ const all = computed(() => (data.value || []).map(p => ({
   logo: p.logo || '',
   description: p.description || '',
   features: p.features || [],
-  install: p.install || (p.link ? `git clone ${p.link}` : '')
+  install: p.install || (p.link ? `git clone ${p.link}` : ''),
+  page: p.page || ''
 })))
 
 const filters = computed(() => {
@@ -173,6 +174,7 @@ useStatusLine(() => ({
       <div class="tui-actions">
         <a :href="current.link" target="_blank" rel="noopener noreferrer" class="tui-btn tui-btn--primary"><span>o</span>open repo</a>
         <a :href="`${current.link}#readme`" target="_blank" rel="noopener noreferrer" class="tui-btn"><span class="tui-key">r</span>readme</a>
+        <NuxtLink v-if="current.page" :to="current.page" class="tui-btn">landing page</NuxtLink>
       </div>
     </TuiPane>
   </div>

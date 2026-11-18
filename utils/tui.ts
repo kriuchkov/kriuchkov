@@ -62,7 +62,7 @@ export interface TuiTab {
 
 export const TUI_TABS: TuiTab[] = [
   { key: '1', label: 'home', to: '/', match: p => p === '/' },
-  { key: '2', label: 'projects', to: '/projects', match: p => p.startsWith('/projects') },
+  { key: '2', label: 'projects', to: '/projects', match: p => p.startsWith('/projects') || p.startsWith('/tock') },
   { key: '3', label: 'writing', to: '/blog', match: p => p.startsWith('/blog') },
   { key: '4', label: 'ai', to: '/ai', match: p => p.startsWith('/ai') }
 ]

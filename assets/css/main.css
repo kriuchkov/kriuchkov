@@ -782,6 +782,55 @@ html.light {
 .tui-error__actions { padding-top: 18px; border-top: 1px dashed var(--line); gap: 8px 12px; }
 
 /* ---------------------------------------------------------------
+   Landing page: /tock. The demo is an inlined SVG in its own dark
+   colors, so it reads as a terminal in both themes.
+   --------------------------------------------------------------- */
+.tui-landing { display: flex; flex-direction: column; gap: 32px; }
+.tui-landing__crumbs { display: flex; align-items: center; gap: 8px; margin-top: -12px; font-size: 13px; color: var(--fg-muted); }
+.tui-landing__crumbs a:hover { color: var(--fg-strong); }
+.tui-pane.tui-landing__hero { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 20px 48px; padding: 26px 24px 20px; }
+.tui-landing__intro { flex: 3 1 560px; min-width: 0; display: flex; align-items: flex-start; gap: 18px; }
+.tui-landing__mark { flex: none; }
+.tui-landing__lead { min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.tui-landing__lead p { margin: 0; max-width: 76ch; }
+.tui-landing__title { margin: 0; font-size: 28px; line-height: 1.2; font-weight: 800; letter-spacing: -0.01em; color: var(--fg-strong); }
+.tui-landing__links { display: flex; flex-wrap: wrap; align-items: center; gap: 0 4px; margin-left: -10px; font-size: 13px; }
+.tui-landing__links > .tui-muted { padding: 0 10px; }
+.tui-landing__install { flex: 2 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.tui-landing__methods { display: flex; flex-wrap: wrap; gap: 6px; font-size: 13px; }
+.tui-landing__install .tui-code pre { padding: 14px 16px; font-size: 14px; }
+.tui-landing__demo { overflow-x: auto; }
+.tui-landing__demo svg { display: block; width: 100%; height: auto; }
+/* a click on a demo tab moves the page to the demo, below the sticky tab bar */
+.tui-landing__demo .mk { scroll-margin-top: 52px; }
+.tui-landing__foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; }
+.tui-landing__cmds { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr)); gap: 8px 40px; font-size: 13.5px; }
+.tui-landing__cmds > div { white-space: pre; overflow-x: auto; }
+.tui-landing__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 32px 20px; }
+.tui-landing__grid p { margin: 0; }
+.tui-landing__snippet {
+  margin: 0;
+  padding: 12px 14px;
+  overflow-x: auto;
+  background: var(--surface);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--fg);
+}
+.tui-landing__table { margin: 0; display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 6px 16px; }
+.tui-landing__table dd { margin: 0; }
+.tui-landing__k { color: var(--keyword); }
+.tui-landing__v { color: var(--info); }
+.tui-landing__danger { color: var(--error); }
+.tui-pane.tui-landing__mcp { flex-direction: row; flex-wrap: wrap; gap: 28px 40px; padding: 30px 24px 24px; }
+.tui-landing__mcp-text { flex: 3 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.tui-landing__mcp-text p { margin: 0; max-width: 64ch; }
+.tui-landing__claim { font-size: 18px; line-height: 1.5; font-weight: 700; color: var(--fg-strong); }
+.tui-landing__tools { flex: 2 1 380px; align-content: start; grid-template-columns: 112px minmax(0, 1fr); gap: 10px 16px; }
+
+/* ---------------------------------------------------------------
    Breakpoints: two panes per row below 1100px, one column and
    bottom tabs below 720px
    --------------------------------------------------------------- */
@@ -844,4 +893,11 @@ html.light {
   .tui-dialog--keys { padding: 32px 16px 16px; }
   .tui-search__sub { display: none; }
   .tui-error { padding-top: 24px; }
+  .tui-landing__title { font-size: 24px; }
+  .tui-pane.tui-landing__hero { padding: 26px 16px 18px; }
+  .tui-landing__intro { gap: 14px; }
+  .tui-landing__mark { width: 40px; height: 40px; }
+  /* the demo is 140 columns wide: keep it readable and let it scroll */
+  .tui-landing__demo svg { width: 640px; max-width: none; }
+  .tui-landing__demo .mk { scroll-margin-top: 64px; }
 }
